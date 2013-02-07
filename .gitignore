@@ -3,5 +3,4 @@
 /*.gem
 *.orig
 /tmp
-/output
 /crash.log
