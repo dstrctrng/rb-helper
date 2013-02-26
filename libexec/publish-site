@@ -16,7 +16,7 @@ source "$shome/libexec/_jason"
 # define command line options:
 DEFINE_boolean "clean" "$FLAGS_FALSE" "delete destination branch contents"
 DEFINE_string "message" "published $(date)" "commit message for published content" "m"
-DEFINE_force "force" "$FLAGS_FALSE" "force push to remote" "f"
+DEFINE_boolean "force" "$FLAGS_FALSE" "force push to remote" "f"
 
 # entry point
 function main {
