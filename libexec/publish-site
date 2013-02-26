@@ -70,7 +70,7 @@ function main {
   pushd "$tmp_dir" > /dev/null
   git add .
   git status -s
-  git commit -m "$FLAGS_message"
+  git commit -m "$FLAGS_message" || true
   git push origin "$dst_branch"
   popd > /dev/null
   rm -rf "$tmp_dir"
@@ -80,7 +80,7 @@ function main {
     opt_push="-f "
   fi
   git push $opt_push primary $dst_branch:refs/heads/$dst_branch
-  git push $opt_push  secondary $dst_branch:refs/heads/$dst_branch || true
+  git push $opt_push secondary $dst_branch:refs/heads/$dst_branch || true
 }
 
 require sub "$BASH_SOURCE" "$@"
